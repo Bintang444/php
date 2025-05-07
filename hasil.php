@@ -71,7 +71,7 @@
     </tr>
 
     <?php
-    $sql = "SELECT * FROM siswa ORDER BY Nama DESC";
+    $sql = "SELECT * FROM siswa";
     $result = $koneksi->query($sql);
 
     if ($result->num_rows > 0) {

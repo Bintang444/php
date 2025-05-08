@@ -92,6 +92,7 @@
     ?>
 </table>
 
+<a href="form-input.php">TAMBAH DATA</a>
 <a href="logout.php">LOGOUT</a>
 
 </body>

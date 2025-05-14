@@ -1,14 +1,18 @@
 <?php
-include 'koneksi.php';
+    include 'koneksi.php';
 
-$id = $_GET['id'];
+    if (isset($_GET['id']) && !empty($_GET['id'])) {
+        $ID_Siswa = $_GET['id'];
 
-mysqli_query($koneksi, "DELETE FROM siswa WHERE ID_SISWA='$id'");
+        $hapus = mysqli_query($koneksi, "DELETE FROM siswa WHERE ID_SISWA='$ID_Siswa'");
 
-mysqli_close($koneksi);
-
-echo "<script>
-        alert('Data berhasil dihapus!');
-        window.location.href = 'index.php';
-      </script>";
+        if ($hapus) {
+            echo "<script>
+                    alert('Data Berhasil Dihapus');
+                    document.location='./';
+                  </script>";
+        }
+    } else {
+        die("Error. No ID Selected!");
+    }
 ?>

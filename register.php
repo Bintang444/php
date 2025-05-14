@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 	<meta charset="UTF-8">
-	<title>Membuat Login Dengan PHP dan MySQLi</title>
+	<title>Membuat Daftar Dengan PHP dan MySQLi</title>
 	<style>
 		body {
 			font-family: Arial, sans-serif;
@@ -54,15 +54,15 @@
 			margin-bottom: 15px;
 			color: red;
 		}
-		.register-link {
+        .login-link {
 			text-align: center;
 			margin-top: 10px;
 		}
-		.register-link a {
+		.login-link a {
 			color: #007bff;
 			text-decoration: none;
 		}
-		.register-link a:hover {
+		.login-link a:hover {
 			text-decoration: underline;
 		}
 	</style>
@@ -75,7 +75,7 @@
 </head>
 <body>
 	<div class="container">
-		<h2>Login</h2>
+		<h2>Daftar</h2>
 
 		<!-- cek pesan notifikasi -->
 		<div class="message">
@@ -89,7 +89,7 @@
 
 		</div>
 
-		<form method="post" action="login_proses.php" id="loginForm">
+		<form method="post" action="register_proses.php" id="registerForm">
 			<table>
 				<tr>
 					<td>Email</td>
@@ -102,19 +102,18 @@
 					<td><input type="password" name="password" placeholder="Masukkan Password" required></td>
 				</tr>
 				<tr>
-					<td colspan="3"><input type="submit" value="LOGIN"></td>
+					<td colspan="3"><input type="submit" value="DAFTAR"></td>
 				</tr>
 			</table>			
 		</form>
-
-		<div class="register-link">
-			<p>Belum punya akun? <a href="register.php">Daftar di sini</a></p>
+        <div class="login-link">
+			<p>Sudah punya akun? <a href="login.php">Login di sini</a></p>
 		</div>
 	</div>
     <script>
 		// Reset form saat halaman di-refresh
 		window.onload = function() {
-			document.getElementById("loginForm").reset();
+			document.getElementById("registerForm").reset();
 		}
 	</script>
 </body>

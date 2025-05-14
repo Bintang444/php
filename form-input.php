@@ -92,7 +92,7 @@
         
         <!-- Tombol Kembali -->
         <div style="margin-top: 10px;">
-            <button type="button" onclick="window.location.href='hasil.php'">Kembali</button>
+            <button type="button" onclick="window.location.href='index.php'">Kembali</button>
         </div>
     </form>
 </body>

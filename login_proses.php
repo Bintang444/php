@@ -17,8 +17,8 @@ $cek = mysqli_num_rows($data);
  
 if($cek > 0){
 	$_SESSION['email'] = $email;
-	$_SESSION['status'] = "login";
-	header("location:hasil.php");
+	$_SESSION['login'] = "true";
+	header("location:index.php");
 }else{
 	// Set flash message gagal login
 	session_start(); // start ulang session untuk flash message

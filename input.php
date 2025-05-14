@@ -18,7 +18,7 @@ if (mysqli_num_rows($ceknis) > 0) {
     $insert = mysqli_query($koneksi, "INSERT INTO siswa (NIS, Nama, Jurusan, No_Telp, Alamat) VALUES ('$nis', '$nama', '$jurusan', '$telp', '$alamat')");
     echo "<script>
         alert('Data berhasil disimpan!');
-        document.location = 'hasil.php';
+        document.location = 'index.php';
     </script>";
 }
 

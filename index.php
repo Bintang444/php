@@ -13,56 +13,89 @@ include 'koneksi.php';
 <head>
     <title>Data Siswa</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            padding: 40px;
-        }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #e0eafc, #cfdef3);
+        margin: 0;
+        padding: 40px;
+        color: #333;
+    }
 
-        h2 {
-            color: #333;
-            text-align: center;
-        }
+    h2 {
+        text-align: center;
+        color: #222;
+        margin-bottom: 30px;
+        font-size: 32px;
+    }
 
-        table {
-            border-collapse: collapse;
-            width: 90%;
-            margin: 20px auto;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+    table {
+        border-collapse: collapse;
+        width: 90%;
+        margin: 0 auto 30px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
 
-        th, td {
-            padding: 12px 16px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
+    th, td {
+        padding: 14px 18px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
 
-        th {
-            background-color: #007bff;;
-            color: white;
-        }
+    th {
+        background-color: #4a90e2;
+        color: #fff;
+        font-weight: bold;
+    }
 
-        tr:hover {
-            background-color: #f1f1f1;
-        }
+    tr:hover {
+        background-color: #f9f9f9;
+    }
 
-        a {
-            display: block;
-            width: fit-content;
-            margin: 20px auto;
-            text-decoration: none;
-            padding: 10px 20px;
-            background-color: #007bff;;
-            color: white;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+    a {
+        display: inline-block;
+        margin: 10px 5px;
+        text-decoration: none;
+        padding: 10px 18px;
+        background-color: #4a90e2;
+        color: white;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
 
-        a:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    a:hover {
+        background-color: #357ab7;
+    }
+
+    td a {
+        display: inline-block;
+        margin-right: 6px;
+        font-size: 14px;
+        padding: 6px 12px;
+        background-color: #28a745;
+        border-radius: 4px;
+    }
+
+    td a:first-child {
+        background-color: #dc3545;
+    }
+
+    td a:hover:first-child {
+        background-color: #c82333;
+    }
+
+    td a:hover:last-child {
+        background-color: #218838;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 8px;
+    }
+</style>
 </head>
 <body>
 
@@ -92,7 +125,8 @@ include 'koneksi.php';
                     <td>{$row['Jurusan']}</td>
                     <td>{$row['No_Telp']}</td>
                     <td>{$row['Alamat']}</td>
-                    <td><a href='hapus.php?id={$row['ID_SISWA']}' onclick='return confirm(\"Yakin Ingin Hapus Data?\");'>Hapus</a></td>
+                    <td><a href='hapus.php?id={$row['ID_SISWA']}' onclick='return confirm(\"Yakin Ingin Hapus Data?\");'>HAPUS</a>
+                    <a href='form-edit.php?id={$row['ID_SISWA']}'>EDIT</a></td>
                   </tr>";
         }
     } else {
